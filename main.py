@@ -6,7 +6,7 @@ from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 
 
-class MyWidget(QMainWindow, Ui_MainWindow):
+class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('window.ui', self)
