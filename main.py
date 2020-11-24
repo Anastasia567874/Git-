@@ -1,5 +1,5 @@
 import sys
-from window import Ui_MainWindow
+from PyQt5 import uic
 from random import randrange
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPainter, QColor
@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 class MyWidget(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        uic.loadUi('window.ui', self)
         self.do_paint = False
         self.pushButton.clicked.connect(self.paint)
 
